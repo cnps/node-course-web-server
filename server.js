@@ -58,7 +58,11 @@ app.get('/about', (req, res) => {
     });
 });
 
-
+app.get('/projects', (req, res) => {
+    res.render('profile.hbs', {
+        pageTitle: 'Projects page'
+    })
+})
 
 app.get('/profile', (req, res) => {
     res.send('<h1>This is profile</h1><div><p>My name is Christian</p></div>');
