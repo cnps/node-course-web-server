@@ -45,6 +45,7 @@ hbs.registerHelper('screamIt', (text) => {
     return text.toUpperCase();
 });
 
+//loads start page
 app.get('/', (req, res) => {
     res.render('home.hbs', {
         pageTitle: 'Home page',
@@ -52,18 +53,21 @@ app.get('/', (req, res) => {
     });
 });
 
+//loads about page
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
         pageTitle: 'About page',
     });
 });
 
+//loads projects page
 app.get('/projects', (req, res) => {
-    res.render('profile.hbs', {
+    res.render('projects.hbs', {
         pageTitle: 'Projects page'
     })
 })
 
+//loads profile page
 app.get('/profile', (req, res) => {
     res.send('<h1>This is profile</h1><div><p>My name is Christian</p></div>');
 });
